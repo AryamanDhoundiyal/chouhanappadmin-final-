@@ -51,7 +51,7 @@ const EmployeeList = () => {
 
   const deleteEmployee = async (employeeId) => {
     try {
-      await axios.delete(`https://cb-1-ajy0.onrender.com/List/${employeeId}`);
+      await axios.delete(`${server_url}/List/${employeeId}`);
       setEmployees(employees.filter(emp => emp.employee_id !== employeeId));
     } catch (error) {
       console.error('Error deleting employee:', error);
